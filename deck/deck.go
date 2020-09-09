@@ -5,6 +5,12 @@ import (
 	"time"
 )
 
+// Card struct is a represenation of a playing card, a value will be an int and the suit is a single letter string to represent the 4 suited deck
+type Card struct {
+	Value int
+	Suit  string
+}
+
 //Deck is a list of Cards using the "Card" struct which can be found in the card.go file
 type Deck struct {
 	Cards []Card
