@@ -14,10 +14,10 @@ This UUID package is the only dependency in this module.
 
 # Methods:
 
-New - Creates a New Deck
-Shuffle - Shuffles and existing deck
-Pop - returns the deck and then a card
-Pop2 - returns the deck and then 2 cards
+* New - Creates a New Deck
+* Shuffle - Shuffles and existing deck
+* Pop - returns the deck and then a card
+* Pop2 - returns the deck and then 2 cards
 
 # Tests:
 
