@@ -3,6 +3,8 @@ package deck
 import (
 	"math/rand"
 	"time"
+
+	"github.com/google/uuid"
 )
 
 // Card struct is a represenation of a playing card, a value will be an int and the suit is a single letter string to represent the 4 suited deck
@@ -13,6 +15,7 @@ type Card struct {
 
 //Deck is a list of Cards using the "Card" struct which can be found in the card.go file
 type Deck struct {
+	id    uuid.UUID
 	Cards []Card
 }
 
@@ -20,6 +23,8 @@ type Deck struct {
 func New() Deck {
 
 	d := Deck{}
+
+	d.id = uuid.New()
 	for suit := 0; suit < 4; suit++ {
 
 		switch suit {
