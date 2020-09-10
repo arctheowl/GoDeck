@@ -7,13 +7,14 @@ import (
 	"github.com/arctheowl/GoDeck.git/deck"
 )
 
-func Test_DeckID(t *tseting.T){
+func Test_DeckID(t *testing.T) {
 	d := deck.New()
 
-	if 
+	if d.ID.String() == "" {
+		t.Error("Deck.New() didn't produce an ID for the deck")
+	}
 
 }
-
 
 // These "Count" Tests are to ensure that when a method is called that the deck contains the correct amount of cards at the end
 func Test_DeckCount(t *testing.T) {

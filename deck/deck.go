@@ -15,7 +15,7 @@ type Card struct {
 
 //Deck is a list of Cards using the "Card" struct which can be found in the card.go file
 type Deck struct {
-	id    uuid.UUID
+	ID    uuid.UUID
 	Cards []Card
 }
 
@@ -24,7 +24,7 @@ func New() Deck {
 
 	d := Deck{}
 
-	d.id = uuid.New()
+	d.ID = uuid.New()
 	for suit := 0; suit < 4; suit++ {
 
 		switch suit {
