@@ -1,6 +1,7 @@
 package deck
 
 import (
+	"fmt"
 	"math/rand"
 	"time"
 
@@ -9,6 +10,7 @@ import (
 
 // Card struct is a represenation of a playing card, a value will be an int and the suit is a single letter string to represent the 4 suited deck
 type Card struct {
+	Name  string
 	Value int
 	Suit  string
 }
@@ -30,22 +32,26 @@ func New() Deck {
 		switch suit {
 		case 0:
 			for value := 1; value < 14; value++ {
-				card1 := Card{value, "h"}
+				stringvalue := fmt.Sprint(value)
+				card1 := Card{(stringvalue + "h"), value, "h"}
 				d.Cards = append(d.Cards, card1)
 			}
 		case 1:
 			for value := 1; value < 14; value++ {
-				card1 := Card{value, "d"}
+				stringvalue := fmt.Sprint(value)
+				card1 := Card{(stringvalue + "d"), value, "d"}
 				d.Cards = append(d.Cards, card1)
 			}
 		case 2:
 			for value := 1; value < 14; value++ {
-				card1 := Card{value, "s"}
+				stringvalue := fmt.Sprint(value)
+				card1 := Card{(stringvalue + "s"), value, "s"}
 				d.Cards = append(d.Cards, card1)
 			}
 		case 3:
 			for value := 1; value < 14; value++ {
-				card1 := Card{value, "c"}
+				stringvalue := fmt.Sprint(value)
+				card1 := Card{(stringvalue + "c"), value, "c"}
 				d.Cards = append(d.Cards, card1)
 			}
 		}

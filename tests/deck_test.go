@@ -16,6 +16,26 @@ func Test_DeckID(t *testing.T) {
 
 }
 
+func Test_Shuffle(t *testing.T) {
+	d := deck.New()
+
+	x := d.Cards[0].Value
+	y := d.Cards[0].Suit
+
+	d.Shuffle()
+
+	a := d.Cards[0].Value
+	b := d.Cards[0].Suit
+
+	if a == x {
+
+		if b == y {
+			t.Error("Deck Shuffle() didn't Shufle correctly")
+		}
+	}
+
+}
+
 // These "Count" Tests are to ensure that when a method is called that the deck contains the correct amount of cards at the end
 func Test_DeckCount(t *testing.T) {
 	d := deck.New()
