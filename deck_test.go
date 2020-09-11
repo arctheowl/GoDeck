@@ -1,7 +1,6 @@
 package deck_test
 
 import (
-	"fmt"
 	"testing"
 
 	deck "github.com/arctheowl/GoDeck"
@@ -19,18 +18,17 @@ func Test_DeckID(t *testing.T) {
 func Test_Shuffle(t *testing.T) {
 	d := deck.New()
 
-	x := d.Cards[0].Value
-	y := d.Cards[0].Suit
+	x, y, z := d.Cards[0], d.Cards[1], d.Cards[2]
 
 	d.Shuffle()
 
-	a := d.Cards[0].Value
-	b := d.Cards[0].Suit
+	a, b, c := d.Cards[0], d.Cards[1], d.Cards[2]
 
 	if a == x {
-
 		if b == y {
-			t.Error("Deck Shuffle() didn't Shufle correctly")
+			if c == z {
+				t.Error("Deck Shuffle() didn't Shufle correctly")
+			}
 		}
 	}
 
@@ -48,7 +46,7 @@ func Test_DeckCount(t *testing.T) {
 func Test_POPDeckCount(t *testing.T) {
 	d := deck.New()
 	d, x := d.Pop()
-	fmt.Println(x)
+	_ = x
 
 	if len(d.Cards) != 51 {
 		t.Error("Deck.Pop() produced the incorrect number of Cards")
@@ -58,7 +56,7 @@ func Test_POPDeckCount(t *testing.T) {
 func Test_POP2DeckCount(t *testing.T) {
 	d := deck.New()
 	d, x, y := d.Pop2()
-	fmt.Println(x, y)
+	_, _ = x, y
 
 	if len(d.Cards) != 50 {
 		t.Error("Deck.Pop2() produced the incorrect number of Cards")
