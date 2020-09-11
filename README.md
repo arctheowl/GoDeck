@@ -5,12 +5,28 @@
 
 This Module is a deck of cards implementation using Golang. 
 
-
 There are several functions to help you create a card game with using a Go backend.
 This module contains two structs "Card" and "Deck".
 
 The Deck has 2 fields, "Cards" which is a list of "Card" structs, and ID which is a uuid ID for those that would like multi deck games and to keep track of individual decks.
 This UUID package is the only dependency in this module.
+
+# Usage:
+
+To import this module you have to first go get the module and then import the module into your project using the commands below.
+
+```bash
+go get -u "github.com/arctheowl/GoDeck"
+```
+
+
+```go
+import (
+    deck "github.com/arctheowl/GoDeck"
+)
+```
+
+
 
 # Methods:
 

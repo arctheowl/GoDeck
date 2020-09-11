@@ -1,5 +1,7 @@
 package deck
 
+//This Module is a deck of cards implementation using Golang.
+
 import (
 	"fmt"
 	"math/rand"

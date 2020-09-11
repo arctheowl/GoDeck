@@ -1,4 +1,4 @@
-module github.com/arctheowl/GoDeck.git
+module github.com/arctheowl/GoDeck
 
 go 1.15
 

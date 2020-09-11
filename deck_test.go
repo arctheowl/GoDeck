@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/arctheowl/GoDeck.git/deck"
+	deck "github.com/arctheowl/GoDeck"
 )
 
 func Test_DeckID(t *testing.T) {
