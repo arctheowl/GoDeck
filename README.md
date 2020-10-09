@@ -37,7 +37,7 @@ import (
 
 # Tests:
 
-I have also implemented several tests that you cna execute as soon as you download to ensure that the package is operating correctly from your first download.
+I have also implemented several tests that you can execute as soon as you download to ensure that the package is operating correctly from your first download.
 To run these tests just navigate to the directory of the package and run the follow command:
 ```bash
 go test tests/deck_test.go
