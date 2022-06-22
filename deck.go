@@ -86,3 +86,16 @@ func (d Deck) Pop2() (Deck, Card, Card) {
 
 	return d, x, y
 }
+
+
+//Pop2 is a function that will return a card and the deck with that card removed so that you are able to deal a card to players
+func (d Deck) PopNum(num int) (Deck, []Card) {
+
+	cards := []Card{}
+	for i := 0; i < num; i++ {
+		cards = append(cards, d.Cards[i])
+	}
+	d.Cards = d.Cards[num:]
+
+	return d, cards
+}

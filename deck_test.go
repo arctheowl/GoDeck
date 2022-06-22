@@ -6,6 +6,7 @@ import (
 	deck "github.com/arctheowl/GoDeck"
 )
 
+// Test_DeckID Tests if the deck will produce an ID to be used
 func Test_DeckID(t *testing.T) {
 	d := deck.New()
 
@@ -15,6 +16,8 @@ func Test_DeckID(t *testing.T) {
 
 }
 
+
+// Test_Shuffle tests if the deck is correctly shuffled after deck.shuffle() is invoked
 func Test_Shuffle(t *testing.T) {
 	d := deck.New()
 
@@ -43,6 +46,7 @@ func Test_DeckCount(t *testing.T) {
 	}
 }
 
+// Test_POPDeckCount Ensures that when using .Pop() only pops a single card out of the deck
 func Test_POPDeckCount(t *testing.T) {
 	d := deck.New()
 	d, x := d.Pop()
@@ -53,6 +57,8 @@ func Test_POPDeckCount(t *testing.T) {
 	}
 }
 
+
+// Test_POP2DeckCount Ensures that when using .Pop2() only pops a couple of cards out of the deck
 func Test_POP2DeckCount(t *testing.T) {
 	d := deck.New()
 	d, x, y := d.Pop2()

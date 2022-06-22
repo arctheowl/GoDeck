@@ -10,5 +10,7 @@ import (
 func main(){
 	d := deck.New()
 	fmt.Println(d)
+	fmt.Println(d.PopNum(9))
+	d = d.popNum(5)
 
 }
