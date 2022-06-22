@@ -10,7 +10,8 @@ import (
 func main(){
 	d := deck.New()
 	fmt.Println(d)
-	fmt.Println(d.PopNum(9))
-	d = d.popNum(5)
+	d, c := d.PopNum(2)
 
+	fmt.Println("NEW DECK", d)
+	fmt.Println("THIS IS THE CARDS:",c)
 }

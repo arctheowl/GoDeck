@@ -68,3 +68,14 @@ func Test_POP2DeckCount(t *testing.T) {
 		t.Error("Deck.Pop2() produced the incorrect number of Cards")
 	}
 }
+
+// Test_POPNumDeckCount Ensures that when using .PopNum() only pops the correct number of cards out of the deck
+func Test_POPNumDeckCount(t *testing.T) {
+	d := deck.New()
+	d, _ = d.PopNum(7)
+	
+
+	if len(d.Cards) != 45 {
+		t.Error("Deck.Pop2() produced the incorrect number of Cards")
+	}
+}
