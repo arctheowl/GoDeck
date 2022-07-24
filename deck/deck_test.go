@@ -3,7 +3,7 @@ package deck_test
 import (
 	"testing"
 
-	deck "github.com/arctheowl/GoDeck"
+	deck "github.com/arctheowl/GoDeck/deck"
 )
 
 // Test_DeckID Tests if the deck will produce an ID to be used
@@ -15,7 +15,6 @@ func Test_DeckID(t *testing.T) {
 	}
 
 }
-
 
 // Test_Shuffle tests if the deck is correctly shuffled after deck.shuffle() is invoked
 func Test_Shuffle(t *testing.T) {
@@ -57,7 +56,6 @@ func Test_POPDeckCount(t *testing.T) {
 	}
 }
 
-
 // Test_POP2DeckCount Ensures that when using .Pop2() only pops a couple of cards out of the deck
 func Test_POP2DeckCount(t *testing.T) {
 	d := deck.New()
@@ -73,7 +71,6 @@ func Test_POP2DeckCount(t *testing.T) {
 func Test_POPNumDeckCount(t *testing.T) {
 	d := deck.New()
 	d, _ = d.PopNum(7)
-	
 
 	if len(d.Cards) != 45 {
 		t.Error("Deck.Pop2() produced the incorrect number of Cards")

@@ -59,7 +59,6 @@ func New() Deck {
 		}
 
 	}
-	d = d.Shuffle()
 	return d
 }
 
@@ -86,7 +85,6 @@ func (d Deck) Pop2() (Deck, Card, Card) {
 
 	return d, x, y
 }
-
 
 //Pop2 is a function that will return a card and the deck with that card removed so that you are able to deal a card to players
 func (d Deck) PopNum(num int) (Deck, []Card) {
